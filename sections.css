@@ -1,0 +1,136 @@
+.row-cont {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+}
+
+@media only screen and (max-width: 700px) {
+    .row-cont {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .row {
+        height: auto!important;
+        height: min-content;
+    }
+    .monitor{
+        display: none;
+    }
+}
+
+.row {
+    height: calc(100vh - 2*var(--title-height));
+    overflow-y: auto;
+}
+
+.row:not(:first-child) {
+    border-left: 1px solid var(--white);
+}
+
+.section-head {
+    position: relative;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.section-head:hover {
+    font-style: italic;
+}
+
+.section.collapsed .section-head::after,
+.section.maximized .section-head::after {
+    font-family: "Material Symbols Outlined";
+    font-style: normal;
+    position: absolute;
+    font-weight: 400;
+    font-size: 22px;
+    top: 2px;
+    right: 5px;
+    float: right;
+}
+
+.section.collapsed .section-head::after {
+    content: '\e5cf';
+}
+
+.section.maximized .section-head::after {
+    content: '\e5ce';
+}
+
+.maximized>.section-head {
+    border: none;
+}
+
+.section.collapsed .section-content {
+    display: none;
+}
+
+.section-content {
+    padding: 5px 10px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--white);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 5px 0px;
+    font-style: 18px;
+    margin-bottom: 10px;
+    border: none;
+    color: white;
+    border-bottom: 1px solid var(--white);
+    background: transparent;
+}
+
+.contact-form input::placeholder {
+    text-transform: uppercase;
+    color: #c5c5c5;
+    font-size: 20px;
+}
+
+.contact-form input:focus {
+    outline: none;
+}
+
+.contact-form input:focus::placeholder {
+    color: transparent;
+}
+
+.submit-btn {
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+
+    width: min(50%, 200px);
+    margin-top: 10px;
+    margin-left: auto;
+
+    border: none;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    user-select: none;
+    cursor: pointer;
+    transition: color 200ms;
+}
+
+.submit-btn:active {
+    font-weight: 500;
+    color: var(--black);
+    background: var(--white);
+}
+
+
+.maximized.clock-cont .section-head {
+    border-bottom: 1px solid var(--white);
+}
+
+.section-head.date-time::after {
+    content: '' !important;
+}

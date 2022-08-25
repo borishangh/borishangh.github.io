@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+:root {
+    --title-height: 38px;
+    --title-fontsize: 18px;
+
+    --white: #e8e8e8;
+    --grey: #acacac;
+    --darkgrey: #424242;
+    --black: #1b1b1b;
+    --pink: #e95177;
+}
+
+::selection{
+    color: var(--black);
+    background: var(--white);
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+}
+
+header,
+footer {
+    position: fixed;
+    height: var(--title-height);
+    width: 100%;
+    background: var(--black);
+    padding: 5px 10px;
+    z-index: 10;
+}
+
+header {
+    top: 0;
+    border-bottom: 1px solid var(--white);
+}
+
+footer {
+    bottom: 0;
+    border-top: 1px solid var(--white);
+}
+
+.title {
+    font-size: var(--title-fontsize);
+}
+
+main {
+    margin: var(--title-height) 0;
+}
+
+.monitor {
+    position: absolute;
+    left: calc(50vw - 300px);
+    top: 200px;
+    width: 300px;
+
+    background: var(--black);
+    outline: 1px solid var(--white);
+    z-index: 20;
+    user-select: none;
+}
+
+.monitor-head {
+    cursor: move;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 2px 5px;
+    outline: 1px solid var(--white);
+}
+
+.monitor-content {
+    font-size: 12px;
+    height: 300px;
+    /* padding: 5px 5px 5px; */
+}
+
+.monitor-content img{
+    width: 100%;
+}
+
+.minimized {
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 10px;
+    bottom: var(--title-height);
+}
+
+.minimized .monitor-content {
+    display: none;
+}
+
+.minimize-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    background: var(--white);
+    color: var(--black);
+
+    height: 100%;
+    width: 20px;
+    transition: 200ms;
+}
+
+.minimized .monitor-head {
+    cursor: pointer;
+}
+
+.minimized .minimize-btn::after {
+    content: '+';
+}
+
+.minimize-btn::after {
+    content: '-';
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    outline: 1px solid var(--white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    margin-right: 7px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 200,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+.footer-marquee{
+    width: calc(100% - 100px);
+}
+
+footer>* {
+    display: inline-block;
+}
+
+.links a svg {
+    height: calc(var(--title-fontsize) + 2px);
+    vertical-align: top;
+    fill: var(--white);
+}
+
+.links {
+    width: 90px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

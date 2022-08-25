@@ -1,0 +1,55 @@
+.clock-face {
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    margin: 10px 20px;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.degrees {
+    position: absolute;
+    top: 4px;
+    width: 1px;
+}
+
+.degrees::after {
+    content: '';
+    position: absolute;
+    height: 2%;
+    width: 50%;
+    margin-left: 18%;
+    background: var(--white);
+}
+
+.degrees:nth-child(5n):after {
+    height: 6%;
+}
+
+.clock-centre {
+    z-index: 4;
+    border-radius: 50%;
+    background: var(--black);
+    border: 2px solid var(--white);
+}
+
+.sec-cont,
+.min-cont,
+.hrs-cont {
+    position: absolute;
+}
+
+.hrs,
+.min {
+    position: absolute;
+    background: var(--white);
+}
+
+.sec {
+    position: absolute;
+    background: var(--orange);
+}
