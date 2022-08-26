@@ -8,7 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
     dragElement(monitor);
 })
 
-
 async function setClock() {
     let timezone = await fetchTmz();
     let tmzText = timezone.offset + ' ' + timezone.tmz;
@@ -22,8 +21,6 @@ async function setClock() {
     dateTime.innerHTML = '';
     tmz.innerHTML = '<span class="material-symbols-outlined">my_location</span>' +
         tmzText;
-
-    console.log(tmzText);
 
     dateTime.appendChild(time);
     dateTime.appendChild(tmz);
@@ -110,14 +107,6 @@ document.addEventListener('click', (e) => {
     section.classList.toggle('collapsed');
     section.classList.toggle('maximized');
 })
-
-// document.addEventListener('click', (e) => {
-//     let section = e.target.closest(".section");
-//     if (section.classList.contains('clock-cont')) {
-//         section.classList.toggle('collapsed');
-//         section.classList.toggle('maximized');
-//     }
-// })
 
 document.querySelector('.footer-marquee')
     .innerHTML = `So Long, So Long January, `.repeat(100);

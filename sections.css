@@ -131,3 +131,8 @@
 .section-head.date-time::after {
     content: '' !important;
 }
+
+.footnote{
+    padding: 10px 20px;
+    font-size: 12px;
+}
