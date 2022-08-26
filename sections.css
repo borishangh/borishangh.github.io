@@ -28,6 +28,8 @@
 .section-head {
     position: relative;
     padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 300;
     border-bottom: 1px solid var(--white);
     cursor: pointer;
 }
@@ -124,11 +126,6 @@
     font-weight: 500;
     color: var(--black);
     background: var(--white);
-}
-
-
-.maximized.clock-cont .section-head {
-    border-bottom: 1px solid var(--white);
 }
 
 .section-head.date-time::after {

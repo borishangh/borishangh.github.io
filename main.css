@@ -79,8 +79,7 @@ main {
 
 .monitor-content {
     font-size: 12px;
-    height: 300px;
-    /* padding: 5px 5px 5px; */
+    height: fit-content;
 }
 
 .monitor-content img{
@@ -92,6 +91,7 @@ main {
     top: auto;
     left: auto;
     right: 10px;
+    width: 300px;
     bottom: var(--title-height);
 }
 

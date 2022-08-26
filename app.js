@@ -2,10 +2,11 @@ const dateTime = document.querySelector('.date-time');
 const section = document.querySelector('.section');
 const monitor = document.querySelector('.monitor');
 
-
-setInterval(setTime, 500);
-setClock();
-dragElement(monitor);
+window.addEventListener('DOMContentLoaded', () => {
+    setInterval(setTime, 500);
+    setClock();
+    dragElement(monitor);
+})
 
 
 async function setClock() {
@@ -62,6 +63,8 @@ function dragElement(element) {
         height = element.offsetHeight,
         width = element.offsetWidth;
 
+    let rect = element.getBoundingClientRect();
+
     element.onmousedown = (e) => {
 
         if (e.target.classList.contains('minimize-btn')) return;
@@ -86,9 +89,11 @@ function dragElement(element) {
         cy = cy < 0 ? 0 : cy;
 
         if (window.innerWidth - cx < width)
-            cx = window.innerWidth - width - 1;
-        if (window.innerHeight - cy < height)
-            cy = window.innerHeight - height - 1;
+            cx = window.innerWidth - width - 5;
+        if (cy + rect.height > window.innerHeight)
+            cy = window.innerHeight - height - 5;
+
+        console.log();
 
         element.style.left = cx + 'px';
         element.style.top = cy + 'px';
@@ -97,21 +102,22 @@ function dragElement(element) {
 
 document.addEventListener('click', (e) => {
     let section = e.target.closest(".section");
-    if (!section || !e.target.classList.contains('section-head')) return;
+    if (!section
+        || !e.target.classList.contains('section-head')
+        && !section.classList.contains('clock-cont'))
+        return;
 
-    console.log(e.target)
     section.classList.toggle('collapsed');
     section.classList.toggle('maximized');
 })
 
-document.addEventListener('click', (e) => {
-    let section = e.target.closest(".section");
-    if (e.target.closest(".section")
-        .classList.contains('clock-cont')) {
-        section.classList.toggle('collapsed');
-        section.classList.toggle('maximized');
-    }
-})
+// document.addEventListener('click', (e) => {
+//     let section = e.target.closest(".section");
+//     if (section.classList.contains('clock-cont')) {
+//         section.classList.toggle('collapsed');
+//         section.classList.toggle('maximized');
+//     }
+// })
 
 document.querySelector('.footer-marquee')
     .innerHTML = `So Long, So Long January, `.repeat(100);
