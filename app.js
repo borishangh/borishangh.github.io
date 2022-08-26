@@ -19,8 +19,7 @@ async function setClock() {
     tmz.className = 'tmz-text';
 
     dateTime.innerHTML = '';
-    tmz.innerHTML = '<span class="material-symbols-outlined">my_location</span>' +
-        tmzText;
+    tmz.innerHTML = tmzText;
 
     dateTime.appendChild(time);
     dateTime.appendChild(tmz);
@@ -29,8 +28,7 @@ async function setClock() {
 function setTime() {
     if (document.querySelector('.time-text'))
         document.querySelector('.time-text')
-            .innerHTML = '<span class="material-symbols-outlined">schedule</span>' +
-            moment().format('M/D/YYYY h:mm:ss');
+            .innerHTML = moment().format('M/D/YYYY h:mm:ss');
 }
 
 async function fetchTmz() {
@@ -82,13 +80,13 @@ function dragElement(element) {
         var cx = e.clientX - initX,
             cy = e.clientY - initY;
 
-        cx = cx < 0 ? 0 : cx;
-        cy = cy < 0 ? 0 : cy;
+        cx = cx < 5 ? 5 : cx;
+        cy = cy < 42 ? 42 : cy;
 
-        if (window.innerWidth - cx < width)
+        if (cx + rect.width > window.innerWidth)
             cx = window.innerWidth - width - 5;
-        if (cy + rect.height > window.innerHeight)
-            cy = window.innerHeight - height - 5;
+        if (cy + rect.height > window.innerHeight - 42)
+            cy = window.innerHeight - height - 42;
 
         console.log();
 
@@ -105,7 +103,6 @@ document.addEventListener('click', (e) => {
         return;
 
     section.classList.toggle('collapsed');
-    section.classList.toggle('maximized');
 })
 
 document.querySelector('.footer-marquee')

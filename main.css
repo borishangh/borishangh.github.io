@@ -9,6 +9,10 @@
     --title-height: 38px;
     --title-fontsize: 18px;
 
+    --normal: 18px;
+    --medium: 20px;
+    --large: 22px;
+
     --white: #e8e8e8;
     --grey: #acacac;
     --darkgrey: #424242;
@@ -16,7 +20,7 @@
     --pink: #e95177;
 }
 
-::selection{
+::selection {
     color: var(--black);
     background: var(--white);
 }
@@ -82,7 +86,7 @@ main {
     height: fit-content;
 }
 
-.monitor-content img{
+.monitor-content img {
     width: 100%;
 }
 
@@ -148,7 +152,7 @@ main {
         'opsz' 48
 }
 
-.footer-marquee{
+.footer-marquee {
     width: calc(100% - 100px);
 }
 
