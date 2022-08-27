@@ -23,7 +23,6 @@ function changeTheme(select) {
     }
     let theme = themes[select];
     Object.keys(theme).forEach((key) => {
-        console.log(key, theme[key]);
         document.querySelector(':root').style
             .setProperty(`--${key}`, theme[key]);
     })

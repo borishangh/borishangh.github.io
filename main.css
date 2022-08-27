@@ -50,7 +50,6 @@ footer {
     border-top: 1px solid var(--foreground);
 }
 
-
 a {
     color: var(--highlight);
     text-decoration: none;
