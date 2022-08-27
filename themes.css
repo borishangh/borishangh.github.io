@@ -33,7 +33,7 @@
     content: '';
     display: inline-block;
     height: 14px;
-    aspect-ratio: 1/1;
+    width: 14px;
 
     margin-inline: 5px;
     border-radius: 50%;

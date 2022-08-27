@@ -10,6 +10,7 @@ const min_hand = document.querySelector('.min');
 const sec_hand = document.querySelector('.sec');
 
 const side = clock.clientWidth;
+clock.style.height = `${side}px`;
 
 setupClock();
 setupHands();
