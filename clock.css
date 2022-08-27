@@ -8,7 +8,7 @@
     aspect-ratio: 1/1;
     margin: 10px 20px;
     border-radius: 50%;
-    border: 2px solid var(--white);
+    border: 2px solid var(--foreground);
 }
 
 .degrees {
@@ -23,18 +23,18 @@
     height: 2%;
     width: 50%;
     margin-left: 18%;
-    background: var(--white);
+    background: var(--foreground);
 }
 
-.degrees:nth-child(5n):after {
+.degrees:nth-child(5n)::after {
     height: 6%;
 }
 
 .clock-centre {
     z-index: 4;
     border-radius: 50%;
-    background: var(--black);
-    border: 2px solid var(--white);
+    background: var(--background);
+    border: 2px solid var(--foreground);
 }
 
 .sec-cont,
@@ -46,10 +46,9 @@
 .hrs,
 .min {
     position: absolute;
-    background: var(--white);
+    background: var(--foreground);
 }
 
 .sec {
     position: absolute;
-    background: var(--orange);
 }

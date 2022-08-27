@@ -15,14 +15,24 @@
 
     <title>portfolio</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="sections.css">
     <link rel="stylesheet" href="clock.css">
 </head>
 
 <body>
 
+    <div class="ball-container"></div>
+
     <header>
-        <div class="title">@borishan_gh</div>
+        <div class="title">
+            <span>@borishan_gh</span>
+            <span class="themes">
+                <div class="theme" id="twilight">twilight</div>
+                <div class="theme" id="midday">midday</div>
+                <div class="theme" id="night">night</div>
+            </span>
+        </div>
     </header>
 
     <div class="monitor">
@@ -111,57 +121,59 @@
 
                 <div class="section">
                     <div class="section-head">Whitman Cats</div>
-                    <div class="section-content"><a href="https://borishangh.github.io/whitmancats/" target="_blank" rel="noopener noreferrer">A site</a> that utilizes the <a href="https://cataas.com/#/"  target="_blank"> Cats as a
-                            Service</a> API and <a href="https://poetrydb.org/index.html" target="_blank">PoetryDB</a> to pair a random Whitman quote with a cute cat, just like they
+                    <div class="section-content"><a href="https://borishangh.github.io/whitmancats/" target="_blank"
+                            rel="noopener noreferrer">A site</a> that utilizes the <a href="https://cataas.com/#/"
+                            target="_blank"> Cats as a
+                            Service</a> API and <a href="https://poetrydb.org/index.html" target="_blank">PoetryDB</a>
+                        to pair a cute cat with a random Whitman quote. Just the way they
                         were meant to be &lt;3 </div>
-                    </div>
-
                 </div>
 
-                <div class="row right">
+            </div>
 
-                    <div class="section clock-cont">
-                        <div class="section-head date-time">clock</div>
-                        <div class="section-content">
-                            <div class="clock-face">
-                                <div class="clock-centre"></div>
-                                <div class="hrs-cont">
-                                    <div class="hrs"></div>
-                                </div>
-                                <div class="min-cont">
-                                    <div class="min"></div>
-                                </div>
-                                <div class="sec-cont">
-                                    <div class="sec"></div>
-                                </div>
+            <div class="row right">
+
+                <div class="section clock-cont">
+                    <div class="section-head date-time">clock</div>
+                    <div class="section-content">
+                        <div class="clock-face">
+                            <div class="clock-centre"></div>
+                            <div class="hrs-cont">
+                                <div class="hrs"></div>
+                            </div>
+                            <div class="min-cont">
+                                <div class="min"></div>
+                            </div>
+                            <div class="sec-cont">
+                                <div class="sec"></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="section contact">
-                        <div class="section-head">Contact Form</div>
-                        <div class="section-content">
-                            <form class="contact-form">
-                                <input type="email" name="email" id="contact-email" placeholder="email"
-                                    autocomplete="off">
-
-                                <input type="text" name="name" id="contact-name" placeholder="name" autocomplete="off">
-
-                                <input type="text" name="message" id="contact-message" placeholder="your message here"
-                                    autocomplete="off">
-
-                                <div class="submit-btn">Submit</div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="section footnote">
-                        <p>for all intents and purposes <br>
-                            Email: borishan.gh[at]gmail.com
-                        </p>
-                    </div>
-
                 </div>
+
+                <div class="section contact">
+                    <div class="section-head">Contact Form</div>
+                    <div class="section-content">
+                        <form class="contact-form">
+                            <input type="email" name="email" id="contact-email" placeholder="email" autocomplete="off">
+
+                            <input type="text" name="name" id="contact-name" placeholder="name" autocomplete="off">
+
+                            <input type="text" name="message" id="contact-message" placeholder="your message here"
+                                autocomplete="off">
+
+                            <div class="submit-btn">Submit</div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="section footnote">
+                    <p>for all intents and purposes <br>
+                        Email: borishan.gh[at]gmail.com
+                    </p>
+                </div>
+
+            </div>
 
     </main>
 
@@ -189,6 +201,7 @@
 
     <script src="app.js"></script>
     <script src="clock.js"></script>
+    <script src="themes.js"></script>
 </body>
 
 

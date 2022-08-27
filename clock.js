@@ -55,7 +55,7 @@ function setupHands() {
 
     sec_hand.style.height = `${0.65 * side}px`;
     sec_hand.style.width = `${0.05 * side}px`;  //8
-    sec_hand.style.border = `${0.01 * side}px solid var(--white)`;  //4
+    sec_hand.style.border = `${0.01 * side}px solid var(--foreground)`;  //4
     sec_hand.style.marginLeft = `${-0.03 * side}px`;  //2.4
     sec_hand.style.marginTop = `${-0.55 * side}px`; //115
 

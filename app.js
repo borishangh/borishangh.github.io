@@ -42,7 +42,7 @@ async function fetchTmz() {
         })
 }
 
-document.querySelector('.monitor').addEventListener('click', (e) => {
+document.querySelector('.monitor').addEventListener('mouseup', (e) => {
     let minBtn = document.querySelector('.minimize-btn')
     if (e.target == minBtn || monitor.classList.contains('minimized')) {
         minBtn.closest('.monitor').classList.toggle('minimized');
@@ -51,9 +51,6 @@ document.querySelector('.monitor').addEventListener('click', (e) => {
 })
 
 function dragElement(element) {
-
-    if (element.classList.contains('minimized')) return;
-
     let isMouseDown, initX, initY,
         height = element.offsetHeight,
         width = element.offsetWidth;
@@ -75,7 +72,7 @@ function dragElement(element) {
     };
 
     function drag(e) {
-        if (!isMouseDown) return;
+        if (!isMouseDown || element.classList.contains('minimized')) return;
 
         var cx = e.clientX - initX,
             cy = e.clientY - initY;

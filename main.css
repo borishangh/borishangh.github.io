@@ -13,21 +13,20 @@
     --medium: 20px;
     --large: 22px;
 
-    --white: #e8e8e8;
-    --grey: #acacac;
-    --darkgrey: #424242;
-    --black: #1b1b1b;
-    --pink: #e95177;
+    --foreground: #e8e8e8;
+    --background: #1b1b1b;
+    --highlight: #fe688e;
+
 }
 
 ::selection {
-    color: var(--black);
-    background: var(--white);
+    color: var(--background);
+    background: var(--foreground);
 }
 
 body {
-    background: var(--black);
-    color: var(--white);
+    background: var(--background);
+    color: var(--foreground);
     line-height: 1.6;
 }
 
@@ -36,29 +35,29 @@ footer {
     position: fixed;
     height: var(--title-height);
     width: 100%;
-    background: var(--black);
+    background: var(--background);
     padding: 5px 10px;
     z-index: 10;
 }
 
 header {
     top: 0;
-    border-bottom: 1px solid var(--white);
+    border-bottom: 1px solid var(--foreground);
 }
 
 footer {
     bottom: 0;
-    border-top: 1px solid var(--white);
+    border-top: 1px solid var(--foreground);
 }
 
 
-a{
-    color: var(--pink);
+a {
+    color: var(--highlight);
     text-decoration: none;
 }
 
-a:hover{    
-    border-bottom: 1px dashed var(--pink);
+a:hover {
+    border-bottom: 1px dashed var(--highlight);
 }
 
 .title {
@@ -75,8 +74,8 @@ main {
     top: 200px;
     width: 300px;
 
-    background: var(--black);
-    outline: 1px solid var(--white);
+    background: var(--background);
+    outline: 1px solid var(--foreground);
     z-index: 20;
     user-select: none;
 }
@@ -89,7 +88,7 @@ main {
     justify-content: space-between;
     font-size: 12px;
     padding: 2px 5px;
-    outline: 1px solid var(--white);
+    outline: 1px solid var(--foreground);
 }
 
 .monitor-content {
@@ -99,6 +98,7 @@ main {
 
 .monitor-content img {
     width: 100%;
+    vertical-align: bottom;
 }
 
 .minimized {
@@ -124,8 +124,8 @@ main {
     justify-content: center;
 
     font-size: 24px;
-    background: var(--white);
-    color: var(--black);
+    background: var(--foreground);
+    color: var(--background);
 
     height: 100%;
     width: 20px;
@@ -146,11 +146,11 @@ main {
 
 ::-webkit-scrollbar {
     width: 10px;
-    outline: 1px solid var(--white);
+    outline: 1px solid var(--foreground);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--white);
+    background: var(--foreground);
 }
 
 .material-symbols-outlined {
@@ -176,7 +176,7 @@ footer>* {
     height: calc(var(--title-fontsize) + 2px);
     margin-top: -6px;
     vertical-align: top;
-    fill: var(--white);
+    fill: var(--foreground);
 }
 
 .links {
