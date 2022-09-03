@@ -14,7 +14,7 @@ function changeTheme(select) {
         }, night: {
             foreground: '#e8e8e8',
             background: '#1b1b1b',
-            highlight: '#fe688e'
+            highlight: '#67b0ff'
         }, twilight: {
             foreground: '#1b1b1b',
             background: '#ffc6e2',

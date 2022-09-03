@@ -14,7 +14,7 @@
 .degrees {
     position: absolute;
     top: 4px;
-    width: 1px;
+    width: 3px;
 }
 
 .degrees::after {

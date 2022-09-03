@@ -15,8 +15,7 @@
 
     --foreground: #e8e8e8;
     --background: #1b1b1b;
-    --highlight: #fe688e;
-
+    --highlight: #67b0ff;
 }
 
 ::selection {
@@ -176,6 +175,10 @@ footer>* {
     margin-top: -6px;
     vertical-align: top;
     fill: var(--foreground);
+}
+
+.links a:hover{
+    border: none;
 }
 
 .links {
