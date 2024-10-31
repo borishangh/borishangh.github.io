@@ -187,3 +187,10 @@ footer>* {
     align-items: center;
     justify-content: space-evenly;
 }
+ul{
+    margin: 10px 0;
+}
+li{
+    list-style: circle;
+    margin: 0 0 0 15px;
+}

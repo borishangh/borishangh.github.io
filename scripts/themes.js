@@ -10,7 +10,7 @@ function changeTheme(select) {
         midday: {
             foreground: '#1b1b1b',
             background: '#e1edff',
-            highlight: '#e00850'
+            highlight: '#9600b5'
         }, night: {
             foreground: '#e8e8e8',
             background: '#1b1b1b',
